@@ -13,6 +13,8 @@
 		D3ACCA5A1F2846D2001B7095 /* Cubes3.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3ACCA581F2846D2001B7095 /* Cubes3.xcdatamodeld */; };
 		D3ACCA5C1F2846D2001B7095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3ACCA5B1F2846D2001B7095 /* Assets.xcassets */; };
 		D3ACCA5F1F2846D2001B7095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3ACCA5D1F2846D2001B7095 /* LaunchScreen.storyboard */; };
+		D3ACCA671F284C0A001B7095 /* i-hate-these-people-mnn1z6ci.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3ACCA661F284C0A001B7095 /* i-hate-these-people-mnn1z6ci.jpg */; };
+		D3ACCA691F284D1F001B7095 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3ACCA681F284D1F001B7095 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		D3ACCA5B1F2846D2001B7095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3ACCA5E1F2846D2001B7095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3ACCA601F2846D2001B7095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3ACCA661F284C0A001B7095 /* i-hate-these-people-mnn1z6ci.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "i-hate-these-people-mnn1z6ci.jpg"; path = "../../i-hate-these-people-mnn1z6ci.jpg"; sourceTree = "<group>"; };
+		D3ACCA681F284D1F001B7095 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +60,10 @@
 		D3ACCA501F2846D2001B7095 /* Cubes3 */ = {
 			isa = PBXGroup;
 			children = (
+				D3ACCA661F284C0A001B7095 /* i-hate-these-people-mnn1z6ci.jpg */,
 				D3ACCA511F2846D2001B7095 /* AppDelegate.swift */,
 				D3ACCA531F2846D2001B7095 /* ViewController.swift */,
+				D3ACCA681F284D1F001B7095 /* GameViewController.swift */,
 				D3ACCA551F2846D2001B7095 /* Main.storyboard */,
 				D3ACCA5B1F2846D2001B7095 /* Assets.xcassets */,
 				D3ACCA5D1F2846D2001B7095 /* LaunchScreen.storyboard */,
@@ -125,6 +131,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ACCA671F284C0A001B7095 /* i-hate-these-people-mnn1z6ci.jpg in Resources */,
 				D3ACCA5F1F2846D2001B7095 /* LaunchScreen.storyboard in Resources */,
 				D3ACCA5C1F2846D2001B7095 /* Assets.xcassets in Resources */,
 				D3ACCA571F2846D2001B7095 /* Main.storyboard in Resources */,
@@ -138,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3ACCA691F284D1F001B7095 /* GameViewController.swift in Sources */,
 				D3ACCA541F2846D2001B7095 /* ViewController.swift in Sources */,
 				D3ACCA5A1F2846D2001B7095 /* Cubes3.xcdatamodeld in Sources */,
 				D3ACCA521F2846D2001B7095 /* AppDelegate.swift in Sources */,

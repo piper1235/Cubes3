@@ -12,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cubes3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="Cubes3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -20,7 +20,19 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NQA-eB-TVc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NQA-eB-TVc" secondAttribute="bottom" id="Neb-Hy-olU"/>
+                            <constraint firstAttribute="trailing" secondItem="NQA-eB-TVc" secondAttribute="trailing" id="cL9-R9-DAY"/>
+                            <constraint firstItem="NQA-eB-TVc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lUh-Sj-zko"/>
+                            <constraint firstItem="NQA-eB-TVc" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="pR8-4Y-4Lt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="IfF-9X-rnY">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qrZ-Y9-8dR">
@@ -29,15 +41,18 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="NQA-eB-TVc" id="mUx-Qp-V9o"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="476" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="DJE-c0-1Pn">
             <objects>
-                <viewController id="Tkx-JR-hc6" sceneMemberID="viewController">
+                <viewController id="Tkx-JR-hc6" customClass="GameViewController" customModule="Cubes3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a46-4f-ruP"/>
                         <viewControllerLayoutGuide type="bottom" id="kII-LS-GCO"/>
@@ -46,14 +61,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HmL-mn-5SY">
-                                <rect key="frame" x="47" y="84" width="280" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="i-hate-these-people-mnn1z6ci.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="HmL-mn-5SY">
+                                <rect key="frame" x="47.5" y="84" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="Uin-NI-KYa"/>
                                     <constraint firstAttribute="width" constant="280" id="eLE-qo-wHf"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHu-gj-ptt">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Cube" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FHu-gj-ptt">
                                 <rect key="frame" x="47.5" y="254" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -62,6 +77,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksf-2L-EUP">
                                 <rect key="frame" x="172.5" y="304" width="30" height="30"/>
                                 <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="Tkx-JR-hc6" eventType="touchUpInside" id="Qnq-UY-Rzn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -80,11 +98,23 @@
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="9qK-2E-Dyx">
                         <rightBarButtonItems>
-                            <barButtonItem systemItem="camera" id="T1j-WK-eel"/>
-                            <barButtonItem title="Photos" id="2o4-36-Gwc"/>
+                            <barButtonItem systemItem="camera" id="T1j-WK-eel">
+                                <connections>
+                                    <action selector="cameraTapped:" destination="Tkx-JR-hc6" id="MQX-n3-cfE"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Photos" id="2o4-36-Gwc">
+                                <connections>
+                                    <action selector="photosTapped:" destination="Tkx-JR-hc6" id="dZa-2W-aY9"/>
+                                </connections>
+                            </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="gameImageView" destination="HmL-mn-5SY" id="Ftx-IJ-M0b"/>
+                        <outlet property="titleTextField" destination="FHu-gj-ptt" id="2aR-h9-OGV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OhM-Ns-SSP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -109,4 +139,7 @@
             <point key="canvasLocation" x="-297" y="139"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="i-hate-these-people-mnn1z6ci.jpg" width="500" height="351"/>
+    </resources>
 </document>
